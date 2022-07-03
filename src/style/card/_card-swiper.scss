@@ -1,0 +1,19 @@
+.swiper {
+    &-slide {
+        height: unset;
+    }
+
+    &-wrapper {
+        margin-bottom: 60px;
+    }
+
+    &-pagination-bullet {
+        background-color: currentColor !important;
+        width: 13px !important;
+        height: 13px !important;
+    }
+
+    /*&-pagination-bullet-active {
+        background-color: currentColor;
+    }*/
+}

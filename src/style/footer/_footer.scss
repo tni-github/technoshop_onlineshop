@@ -1,0 +1,96 @@
+.footer {
+    background-color: $color-primary;
+    color: $color-secondary;
+    padding: 80px 0;
+    max-height: 570px;
+
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr 1fr;
+        grid-template-rows: minmax(307px, auto), 52px;
+        gap: 51px 30px;
+    }
+
+    &__logo-link {
+        place-self: start;
+        //align-self: start;
+        //justify-self: start;
+    }
+
+    &__logo {
+        width: 146px;
+        align-self: start;
+        justify-self: start;
+    }
+
+    &__column {
+
+        &-title {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 42px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &__list {
+        &_double {
+            column-count: 2;
+        }
+
+        &-contacts,
+        &-contacts a {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 21px;
+            margin-bottom: 36px;
+        }
+
+        &-contact {
+            margin-bottom: 21px;
+        }
+    }
+
+    &__list-item {
+        font-size: 22px;
+        font-weight: 400;
+        line-height: 33px;
+
+        margin-bottom: 15px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &:hover {
+            color: $color-main;
+        }
+    }
+
+    &__link {
+        transition: color 0.36s ease-in-out;
+    }
+
+    &__copyrights {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    &__designer {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 21px;
+        margin-bottom: 81px;
+        grid-column: 4 / 5;
+
+        &>p:not(last-child) {
+            margin-bottom: 10px;
+        }
+
+        &-link:hover {
+            color: $color-main;
+            transition: color 0.36s ease-in-out;
+        }
+    }
+}

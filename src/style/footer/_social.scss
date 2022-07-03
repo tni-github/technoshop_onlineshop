@@ -1,0 +1,14 @@
+.social {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+
+    &__link:hover {
+        color: $color-main;
+        transition: color 0.36s ease-in-out;
+    }
+
+    &__link svg {
+        display: block;
+    }
+}

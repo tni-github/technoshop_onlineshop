@@ -1,0 +1,34 @@
+.search {
+    width: 100%;
+    max-width: 818px;
+    height: 50px;
+    position: relative;
+
+    &__input {
+        width: 100%;
+        height: 100%;
+        justify-self: center;
+
+        border: 1px solid #cdcdcd;
+        border-radius: 16px;
+
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+
+        padding-left: 24px;
+        padding-right: 54px;
+    }
+
+    &__button {
+        position: absolute;
+        top: 50%;
+        right: 26px;
+        transform: translateY(-50%);
+        border: 0;
+        background-color: transparent;
+        line-height: 0;
+    }
+
+}
