@@ -9,15 +9,15 @@
     */
     &__list {
         display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(310px, 340px));
         column-gap: 30px;
         row-gap: 40px;
     }
 
-    &__item {
+    /*&__item {
         min-width: 310px;
         max-width: 340px;
-    }
+    }*/
 
 
 }
