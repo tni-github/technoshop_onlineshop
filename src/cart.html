@@ -49,11 +49,11 @@
     <main class="cart-main">
         <!--основное содержание страницы (корзина товаров)-->
         <section class="cart">
-            <h2 class="visually-hidden">Корзина</h2>
-            <div class="cart__container">
-                <div class="container">
+            <h2 class="visually-hidden">Оформление заказа</h2>
+            <div class="container">
+                <div class="cart__container">
                     <section class="cart-goods">
-                        <h3 class="cart-goods__title">Корзина</h3>
+                        <h3 class="cart__title cart-goods__title">Корзина</h3>
                         <ul class="cart-goods__list">
                             <li class="cart-goods__item item">
                                 <img src="img/cart_images/monitor.jpg" alt="" class="item__img">
@@ -141,90 +141,94 @@
                         </ul>
                     </section>
 
-                    <section class="cart__address adress">
-                        <h3 class="cart__title">Адрес доставки</h3>
+                    <section class="cart__total total">
+                        <h3 class="visually-hidden">Подсчет итогов</h3>
+                        <div class="total__wrapper">
+                            <ul class="total__table">
+                                <li class="total__row total__row_header">
+                                    <span>Итого</span>
+                                    <span>41 222 &#8381;</span>
+                                </li>
+                                <li class="total__row total__row_grey">
+                                    <span>Товары, 3 шт.</span>
+                                    <span>41 222 &#8381;</span>
+                                </li>
+                                <li class="total__row total__row_grey">
+                                    <span>Скидка</span>
+                                    <span>0 &#8381;</span>
+                                </li>
+                                <li class="total__row total__row_grey total__row_gap">
+                                    <span>Доставка</span>
+                                    <span>0 &#8381;</span>
+                                </li>
+                                <li class="total__row">
+                                    <span>Дата</span>
+                                    <span>01 - 03 июля</span>
+                                </li>
+                                <li class="total__row">
+                                    <span>Оплата</span>
+                                    <span>Картой</span>
+                                </li>
+                            </ul>
 
-                        <form class="cart__address-form">
+                            <div class="total__order">
+                                <button class="total__submit">Оформить заказ</button>
+
+                                <label class="total__agree">
+                                    <input type="checkbox" name="agree" required>
+                                    <span>Согласен с <a class="total__agree-link" href="#">условиями</a> правил
+                                        пользования
+                                        торговой площадкой и&nbsp;правилами
+                                        возврата</span>
+                                </label>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="cart__address address">
+                        <h3 class="cart__title address__title">Адрес доставки</h3>
+
+                        <form class="address__form">
                             <label>
-                                <select class="cart__address-item cart__address-item-select" name="city" id="">
-                                    <option value="" disabled selected>Город</option>
-                                    <option value="Moscow">Москва</option>
-                                    <option value="St. Petersburg">Санкт-Петербург</option>
-                                    <option value="Kazan">Казань</option>
-                                    <option value="Sevastopol">Севастополь</option>
-                                    <option value="Krasnodar">Краснодар</option>
-                                    <option value="Yekaterinburg">Екатеринбург</option>
-                                    <option value="Novosibirsk">Новосибирск</option>
-                                    <option value="Vologda">Вологда</option>
-                                </select>
+                                <div class="address__item-select_wrapper">
+                                    <select class="address__item address__item-select" name="city" id="" required>
+                                        <option value="" disabled selected class="address__item-select_selected">Город
+                                        </option>
+                                        <option value="Moscow">Москва</option>
+                                        <option value="St. Petersburg">Санкт-Петербург</option>
+                                        <option value="Kazan">Казань</option>
+                                        <option value="Sevastopol">Севастополь</option>
+                                        <option value="Krasnodar">Краснодар</option>
+                                        <option value="Yekaterinburg">Екатеринбург</option>
+                                        <option value="Novosibirsk">Новосибирск</option>
+                                        <option value="Vologda">Вологда</option>
+                                    </select>
+                                </div>
                             </label>
 
                             <label>
-                                <input class="cart__address-item" type="text" placeholder="Улица, дом">
+                                <input class="address__item" type="text" placeholder="Улица, дом">
                             </label>
 
                             <label>
-                                <input class="cart__address-item" type="text" placeholder="Квартира">
+                                <input class="address__item" type="text" placeholder="Квартира">
                             </label>
 
                             <label>
-                                <input class="cart__address-item" type="text" placeholder="ФИО" />
+                                <input class="address__item" type="text" placeholder="ФИО" />
                             </label>
 
                             <label>
-                                <input class="cart__address-item" type="text" placeholder="Индекс">
+                                <input class="address__item" type="text" placeholder="Индекс">
                             </label>
 
-                            <button class="cart__address-item cart__address-btn">Сохранить</button>
+                            <button class="address__item address__btn">Сохранить</button>
 
-                            <label class="cart__address-label-save">
+                            <label class="address__label-save">
                                 <input type="checkbox" name="save-address">
                                 Запомнить этот адрес
                             </label>
                         </form>
-                    </section>
-
-                    <section class="cart__total">
-                        <h3 class="visually-hidden">Подсчет итогов</h3>
-
-                        <ul class="cart__total-table">
-                            <li class="cart__total-row cart__total-row_header">
-                                <span>Итого</span>
-                                <span>41 222 &#8381;</span>
-                            </li>
-                            <li class="cart__total-row cart__total-row_grey">
-                                <span>Товары, 3 шт.</span>
-                                <span>41 222 &#8381;</span>
-                            </li>
-                            <li class="cart__total-row cart__total-row_grey">
-                                <span>Скидка</span>
-                                <span>0 &#8381;</span>
-                            </li>
-                            <li class="cart__total-row cart__total-row_grey">
-                                <span>Доставка</span>
-                                <span>0 &#8381;</span>
-                            </li>
-                            <li class="cart__total-row">
-                                <span>Дата</span>
-                                <span>01 - 03 июля</span>
-                            </li>
-                            <li class="cart__total-row">
-                                <span>Оплата</span>
-                                <span>Картой</span>
-                            </li>
-                        </ul>
-
-                        <div class="cart__total-order">
-                            <button class="cart__total-submit">Оформить заказ</button>
-
-                            <label class="cart__total-agree">
-                                <input type="checkbox" name="agree">
-                                <span>Согласен с <a class="cart__total-agree-link" href="#">условиями</a> правил
-                                    пользования
-                                    торговой площадкой и&nbsp;правилами
-                                    возврата</span>
-                            </label>
-                        </div>
                     </section>
                 </div>
             </div>

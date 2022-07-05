@@ -1,0 +1,77 @@
+.address {
+    margin-bottom: 110px;
+
+    &__title {
+        margin-bottom: 30px;
+    }
+
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(3, 340px);
+        gap: 30px 30px;
+    }
+
+    &__item {
+        width: 340px;
+        height: 50px;
+        padding: 15px 45px 15px 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        border: 1px solid $color-primary;
+
+        &-select {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            background-color: transparent;
+            outline: none;
+
+            &_wrapper {
+                position: relative;
+            }
+
+            &_wrapper::after {
+                content: "";
+                position: absolute;
+                align-self: center;
+                top: 50%;
+                right: 45px;
+                transform: translateY(-50%);
+                display: block;
+                width: 18px;
+                height: 18px;
+                background-color: none;
+                background-image: url('././img/cart_images/arrow-bottom.svg');
+                background-repeat: no-repeat;
+                pointer-events: none;
+                background-position: center;
+            }
+
+            &::-ms-expand {
+                display: none;
+            }
+
+            &_selected {
+                color: $color-grey;
+            }
+        }
+
+
+    }
+
+
+
+    &__btn {
+        color: $color-secondary;
+        background-color: $color-primary;
+        border: none;
+    }
+
+    &__label-save {
+        grid-column: 3/3;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}

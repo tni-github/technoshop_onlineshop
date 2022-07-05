@@ -1,3 +1,143 @@
+.card {
+    margin-bottom: 70px;
+
+    &__details {
+        display: flex;
+        gap: 30px;
+        margin-bottom: 70px;
+    }
+
+    &__gallery {
+        max-width: 710px;
+    }
+
+    &__image {
+        margin-bottom: 20px;
+    }
+
+    &__slider-thumb {
+        max-width: 447px;
+    }
+
+    &__thumb-btn {
+        width: 120px;
+        height: 120px;
+        background-color: transparent;
+        border: none;
+
+        &_active {
+            outline: 3px solid $color-main;
+            outline-offset: -3px;
+        }
+    }
+
+    &__info {
+        width: 100%;
+        padding-top: 120px;
+    }
+
+    &__title {
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 54px;
+        margin-bottom: 20px;
+
+    }
+
+    &__vendor-code {
+        font-size: 20px;
+        font-weight: 500;
+        line-height: 24px;
+        margin-bottom: 63px;
+
+    }
+
+    &__control {
+        display: flex;
+        align-items: center;
+        margin-bottom: 70px;
+        max-width: 826px;
+        justify-content: space-between;
+    }
+
+    &__count {
+        display: flex;
+        justify-content: space-between;
+        max-width: 120px;
+        width: 100%;
+        align-items: center;
+        margin-right: 80px;
+    }
+
+    &__btn {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid $color-primary;
+        background-color: transparent;
+        color: $color-primary;
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 30px;
+    }
+
+    &__number {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 37px;
+    }
+
+    &__price {
+        font-size: 34px;
+        font-weight: 500;
+        line-height: 41px;
+        margin-right: auto;
+    }
+
+    &__add-cart {
+        width: 352px;
+        height: 57px;
+        color: $color-secondary;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 24px;
+        background-color: $color-main;
+        border: none;
+    }
+
+    &__params-list {
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25px;
+    }
+
+    &__params-item {
+        display: grid;
+        grid-template-columns: 210px max-content;
+        gap: 100px;
+    }
+
+    &__descripton {
+        max-width: 1450px;
+
+        &-title {
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 32px;
+            margin-bottom: 20px;
+        }
+
+        &-text {
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25px;
+        }
+    }
+
+
+}
+
+
 .recommended {
     margin-bottom: 120px;
 }

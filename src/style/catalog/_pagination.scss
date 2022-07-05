@@ -1,10 +1,43 @@
 .pagination {
     display: flex;
-    gap: 36px;
+    gap: 21px;
     margin: 0 auto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    align-items: center;
 
     &__list {
         display: flex;
-        gap: 36px;
+        gap: 10px;
     }
+
+    &__link {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 2px;
+        border: 2px solid transparent;
+        transition: border-color .2s ease;
+
+
+        &_active {
+            border-color: $color-main;
+        }
+    }
+
+    &__arrow {
+        display: block;
+        width: 18px;
+        height: 18px;
+
+        &[href=""] {
+            opacity: 0.3;
+            pointer-events: none;
+        }
+    }
+
+
 }
