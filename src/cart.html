@@ -12,7 +12,7 @@
     <header class="header">
         <h1 class="visually-hidden">Шапка сайта</h1>
         <div class="container header__container">
-            <a href="/">
+            <a class="header__logo-link" href="/">
                 <img class="header__logo" src="img/logo.svg" alt="Логотип Techno shop">
             </a>
             <form class="header__search search">
@@ -190,7 +190,7 @@
 
                         <form class="address__form">
                             <label>
-                                <div class="address__item-select_wrapper">
+                                <div class="address__item-select_wrapper address__city">
                                     <select class="address__item address__item-select" name="city" id="" required>
                                         <option value="" disabled selected class="address__item-select_selected">Город
                                         </option>
@@ -207,23 +207,24 @@
                             </label>
 
                             <label>
-                                <input class="address__item" type="text" placeholder="Улица, дом">
+                                <input class="address__item address__street" type="text" placeholder="Улица, дом">
                             </label>
 
                             <label>
-                                <input class="address__item" type="text" placeholder="Квартира">
+                                <input class="address__item address__flat" type="text" placeholder="Квартира">
                             </label>
 
                             <label>
-                                <input class="address__item" type="text" placeholder="ФИО" />
+                                <input class="address__item address__name" type="text" placeholder="ФИО" />
                             </label>
 
                             <label>
-                                <input class="address__item" type="text" placeholder="Индекс">
+                                <input class="address__item adress__index" type="text" placeholder="Индекс">
                             </label>
 
-                            <button class="address__item address__btn">Сохранить</button>
+                            <button class="address__item address__btn save-btn">Сохранить</button>
 
+                            <div class="address__item address__hidden"></div>
                             <label class="address__label-save">
                                 <input type="checkbox" name="save-address">
                                 Запомнить этот адрес
@@ -243,7 +244,7 @@
                 <img src="img/logo.svg" alt="Логотип Techno shop" class="footer__logo">
             </a>
 
-            <div class="footer__column">
+            <div class="footer__column footer__catalog">
                 <h3 class="footer__column-title">Каталог</h3>
                 <ul class="footer__list footer__list_double">
                     <li class="footer__list-item">
@@ -267,7 +268,7 @@
                     </li>
 
                     <li class="footer__list-item">
-                        <a href="#" class="footer__link">Электронные книги</a>
+                        <a href="#" class="footer__link">Электронные&nbsp;книги</a>
                     </li>
 
                     <li class="footer__list-item">
@@ -284,7 +285,7 @@
                 </ul>
             </div>
 
-            <div class="footer__column">
+            <div class="footer__column footer__customer">
                 <h3 class="footer__column-title">Покупателям</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item">
@@ -305,14 +306,14 @@
                 </ul>
             </div>
 
-            <div class="footer__column">
+            <div class="footer__column footer__contacts">
                 <h3 class="footer__column-title">Контакты</h3>
                 <ul class="footer__list footer__list-contacts">
                     <li class="footer__list-item footer__list-contact">Тел:
                         <a href="tel:89149239223" class="footer__link">8 914 923 92 - 23</a>
                     </li>
 
-                    <li class="footer__list-item footer__list-contact">Email:
+                    <li class="footer__list-item footer__list-contact footer__list-contact_special">Email:
                         <a href="mailto:TechnoSHOP@gmail.com" class="footer__link">TechnoSHOP@gmail.com</a>
                     </li>
                 </ul>
@@ -358,7 +359,7 @@
 
             <div class="footer__column  footer__designer">
                 <p>Design by Anastasia Ilina</p>
-                <p> Tg:
+                <p>Tg:
                     <a href="" class="footer__designer-link"
                         aria-label="написать сообщение дизайнеру в Telegram">@Mrshmallowww</a>
                 </p>

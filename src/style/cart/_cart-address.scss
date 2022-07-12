@@ -1,6 +1,22 @@
 .address {
     margin-bottom: 110px;
 
+    @include desktop {
+        margin-bottom: 120px;
+    }
+
+    @include laptop {
+        margin-bottom: 10px;
+    }
+
+    @include tablet {
+        margin-bottom: 5px;
+    }
+
+    @include mobile {
+        max-width: 300px;
+    }
+
     &__title {
         margin-bottom: 30px;
     }
@@ -9,6 +25,23 @@
         display: grid;
         grid-template-columns: repeat(3, 340px);
         gap: 30px 30px;
+
+        @include desktop {
+            max-width: 700px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            gap: 20px 20px;
+        }
+
+        @include laptop {
+            max-width: 100%;
+            justify-content: space-between;
+        }
+
+        @include tablet {
+            gap: 10px 20px;
+        }
     }
 
     &__item {
@@ -19,6 +52,18 @@
         font-size: 16px;
         line-height: 20px;
         border: 1px solid $color-primary;
+
+        @include laptop {
+            width: 475px;
+        }
+
+        @include tablet {
+            width: 310px;
+        }
+
+        @include mobile {
+            max-width: 300px;
+        }
 
         &-select {
             appearance: none;
@@ -60,7 +105,22 @@
 
     }
 
+    &__hidden {
+        display: none;
+        max-height: 18px;
+        border: none;
+        margin: 0;
+        padding: 0;
+        content: none;
 
+        @include laptop {
+            display: block;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
 
     &__btn {
         color: $color-secondary;
@@ -73,5 +133,33 @@
         font-weight: 400;
         font-size: 16px;
         line-height: 20px;
+
+        @include desktop {
+            margin-right: 20%;
+        }
+
+        @include laptop {
+            margin-right: 28%;
+
+        }
+
+        @include tablet {
+            margin-right: 17.1%;
+        }
+
+        @include mobile {
+            margin-right: 0;
+            width: 100%;
+        }
     }
 }
+
+/*
+adr-city
+adr-street
+adr-flat
+adr-name
+adr-index
+adr-btn
+adr-save
+*/

@@ -12,6 +12,20 @@
         grid-template-columns: repeat(auto-fill, minmax(310px, 340px));
         column-gap: 30px;
         row-gap: 40px;
+
+        @include desktop {
+            gap: 20px;
+        }
+
+        @include laptop {
+            grid-template-columns: repeat(auto-fill, 310px);
+        }
+
+        @include mobile {
+            grid-template-columns: repeat(auto-fill, 145px);
+            gap: 10px;
+
+        }
     }
 
     /*&__item {
@@ -19,5 +33,21 @@
         max-width: 340px;
     }*/
 
+    &__preload {
+        grid-column: 1 / 5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
+        & svg {
+            transform: rotate(0);
+            animation: rotation 1s infinite linear;
+        }
+    }
+
+    @keyframes rotation {
+        to {
+            transform: rotate(360deg);
+        }
+    }
 }

@@ -2,17 +2,69 @@
     background-color: $color-primary;
     color: $color-secondary;
     padding: 80px 0;
-    max-height: 570px;
+    max-height: 571px;
+
+    @include laptop {
+        padding: 50px 0 54px 0;
+        min-height: 652px;
+    }
+
+    @include tablet {
+        padding: 40px 0 32px 0;
+        max-height: 1400px;
+    }
+
+    @include mobile {
+        padding: 23px 0;
+        min-height: min-content;
+    }
 
     &__container {
         display: grid;
         grid-template-columns: 1fr 2fr 1fr 1fr;
-        grid-template-rows: minmax(307px, auto), 52px;
-        gap: 51px 30px;
+        //grid-template-rows: minmax(307px, auto), 52px;
+        grid-gap: 51px;
+
+        grid-template-areas:
+            "logo catalog customer contacts"
+            "copyrights . . designer";
+
+        @include laptop {
+            grid-template-columns: 395px 235px 280px;
+            grid-template-areas:
+                "logo . ."
+                "catalog customer contacts"
+                "copyrights . designer";
+            grid-gap: 57px 30px;
+        }
+
+        @include tablet {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "logo ."
+                "catalog customer"
+                "catalog contacts"
+                "copyrights designer";
+            row-gap: 50px;
+            column-gap: 101px;
+        }
+
+        @include mobile {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "logo"
+                "catalog"
+                "customer"
+                "contacts"
+                "copyrights"
+                "designer";
+            column-gap: auto;
+        }
     }
 
     &__logo-link {
         place-self: start;
+        grid-area: logo;
         //align-self: start;
         //justify-self: start;
     }
@@ -30,59 +82,137 @@
             font-weight: 700;
             line-height: 42px;
             margin-bottom: 40px;
+
+            @include laptop {
+                margin-bottom: 20px;
+            }
+
+            @include mobile {
+                font-size: 20px;
+                line-height: 130%;
+            }
         }
     }
 
     &__list {
-        &_double {
-            column-count: 2;
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 150%;
+
+        @include mobile {
+            font-size: 14px;
+            line-height: 17px;
         }
 
-        &-contacts,
-        &-contacts a {
+        &_double {
+            column-count: 2;
+            max-width: max-content;
+
+            @include laptop {
+                column-gap: 0px;
+            }
+
+            @include tablet {
+                column-count: auto;
+            }
+        }
+
+        &-item {
+            font-size: 22px;
+            font-weight: 400;
+            line-height: 33px;
+
+            margin-bottom: 15px;
+
+            @include laptop {
+                font-size: 19px;
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+
+            &:hover {
+                color: $color-main;
+            }
+        }
+
+        &-contact,
+        &-contact a {
             font-size: 16px;
             font-weight: 500;
             line-height: 21px;
-            margin-bottom: 36px;
+            //margin-bottom: 21px;
+
+            @include mobile {
+                font-size: 13px;
+                line-height: 130%;
+            }
+
+            &:last-child {
+                margin-bottom: 36px;
+
+                @include mobile {
+                    margin-bottom: 20px;
+                }
+            }
         }
 
-        &-contact {
-            margin-bottom: 21px;
-        }
     }
 
-    &__list-item {
-        font-size: 22px;
-        font-weight: 400;
-        line-height: 33px;
 
-        margin-bottom: 15px;
-
-        &:last-child {
-            margin-bottom: 0;
-        }
-
-        &:hover {
-            color: $color-main;
-        }
+    &-contact {
+        margin-bottom: 21px;
     }
 
     &__link {
         transition: color 0.36s ease-in-out;
     }
 
+    &__catalog {
+        grid-area: catalog;
+    }
+
+    &__customer {
+        grid-area: customer;
+    }
+
+    &__contacts {
+        grid-area: contacts;
+    }
+
     &__copyrights {
         font-size: 16px;
         font-weight: 500;
         line-height: 21px;
+
+        grid-area: copyrights;
+
+        @include laptop {
+            margin-top: 22px
+        }
+
+        @include tablet {
+            margin-top: 14px
+        }
     }
 
     &__designer {
         font-size: 16px;
         font-weight: 500;
         line-height: 21px;
-        margin-bottom: 81px;
-        grid-column: 4 / 5;
+
+        //grid-column: 4 / 5;
+
+        grid-area: designer;
+
+        @include laptop {
+            margin-top: 22px;
+        }
+
+        @include tablet {
+            margin-top: 14px
+        }
 
         &>p:not(last-child) {
             margin-bottom: 10px;

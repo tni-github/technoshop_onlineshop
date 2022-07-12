@@ -10,17 +10,64 @@
         justify-content: space-between;
         gap: 70px 30px;
 
+        grid-template-areas:
+            "goods total"
+            "address .";
+
+        @include desktop {
+            grid-template-columns: 848px 494px;
+            row-gap: 21px;
+        }
+
+        @include laptop {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "goods"
+                "address"
+                "total";
+            row-gap: 50px;
+        }
+
+        @include mobile {
+            max-width: 100%;
+        }
     }
 
     &__title {
         font-size: 44px;
         font-weight: 700;
         line-height: 54px;
+
+        @include mobile {
+            font-size: 30px;
+            line-height: 37px;
+        }
+
     }
 
     //&__address {}
 
     &__total {
         padding-top: 94px;
+
+        grid-area: total;
+
+        @include desktop {
+            min-width: 494px;
+        }
+
+        @include laptop {
+            max-width: 494px;
+            padding-top: 0;
+            margin: 0 auto 120px auto;
+        }
+
+        @include tablet {
+            margin: 0 auto 80px auto;
+        }
+
+        @include mobile {
+            min-width: 300px;
+        }
     }
 }

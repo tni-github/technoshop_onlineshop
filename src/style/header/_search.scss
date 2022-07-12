@@ -1,8 +1,11 @@
 .search {
     width: 100%;
-    max-width: 818px;
     height: 50px;
     position: relative;
+
+    @include mobile {
+        height: 44px;
+    }
 
     &__input {
         width: 100%;
@@ -19,6 +22,18 @@
 
         padding-left: 24px;
         padding-right: 54px;
+
+        @include mobile {
+            padding-left: 14px;
+            padding-right: 44px;
+        }
+
+        /*&:hover,
+        &:active,
+        &:focus {
+            outline: none;
+            border: 1px solid $color-main;
+        }*/
     }
 
     &__button {
@@ -29,6 +44,10 @@
         border: 0;
         background-color: transparent;
         line-height: 0;
+
+        @include mobile {
+            right: 15px;
+        }
     }
 
 }

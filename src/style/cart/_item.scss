@@ -1,12 +1,26 @@
 .item {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
+    row-gap: 21px;
 
     &__img {
         width: 200px;
         height: 200px;
         object-fit: cover;
         margin-right: 30px;
+
+        @include desktop {
+            width: 137px;
+            height: 137px;
+            margin-right: 8px;
+        }
+
+        @include tablet {
+            width: 104px;
+            height: 104px;
+            margin-right: 18px;
+        }
     }
 
     &__detail {
@@ -16,20 +30,50 @@
         margin-right: 25px;
         padding-top: 28px;
 
+        @include desktop {
+            flex-basis: 320px;
+            margin-right: 43px;
+            padding-top: 17px;
+        }
+
+        @include tablet {
+            padding-top: 0;
+        }
+
+        @include mobile {
+            flex-basis: 123px;
+            margin-right: 0;
+
+        }
     }
 
     &__title {
-        min-height: 54px;
-        margin-bottom: 14px;
+        //min-height: 54px;
+        margin-bottom: 41px;
         font-weight: 700;
         font-size: 22px;
         line-height: 27px;
+
+        @include desktop {
+            margin-bottom: 15px;
+        }
+
+        @include tablet {
+            margin-bottom: 12px;
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     &__vendor-code {
         font-weight: 500;
         font-size: 18px;
         line-height: 22px;
+
+        @include tablet {
+            font-size: 12px;
+            line-height: 15px;
+        }
     }
 
     &__control {
@@ -37,6 +81,14 @@
         justify-content: space-between;
         flex-grow: 1;
         align-self: center;
+
+        @include desktop {
+            min-width: 340px;
+        }
+
+        @include mobile {
+            min-width: 300px;
+        }
     }
 
     &__count {
@@ -46,6 +98,14 @@
         width: 100%;
         align-items: center;
         margin-right: 70px;
+
+        @include desktop {
+            margin-right: 52px;
+        }
+
+        @include mobile {
+            margin-right: 0;
+        }
     }
 
     &__btn {
@@ -64,6 +124,11 @@
         font-size: 30px;
         font-weight: 400;
         line-height: 37px;
+
+        @include tablet {
+            font-size: 20px;
+            line-height: 24px;
+        }
     }
 
     &__price {
@@ -71,6 +136,15 @@
         font-size: 22px;
         line-height: 27px;
         align-self: center;
+
+        @include desktop {
+            margin-right: 47px;
+            min-width: 90px;
+        }
+
+        @include mobile {
+            margin-right: 0;
+        }
     }
 
     &__remove-cart {
@@ -80,5 +154,11 @@
         background-color: transparent;
         color: $color-grey-light;
         align-self: center;
+
+        @include mobile {
+            position: absolute;
+            top: 2px;
+            right: 0;
+        }
     }
 }

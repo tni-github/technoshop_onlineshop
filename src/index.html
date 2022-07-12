@@ -12,7 +12,7 @@
     <header class="header">
         <h1 class="visually-hidden">Шапка сайта</h1>
         <div class="container header__container">
-            <a href="/">
+            <a class="header__logo-link" href="/">
                 <img class="header__logo" src="img/logo.svg" alt="Логотип Techno shop">
             </a>
             <form class="header__search search">
@@ -55,9 +55,10 @@
                 <div class="catalog__container">
                     <div class="catalog__goods goods">
                         <ul class="goods__list">
+                            <!--верстка до внедрения API
                             <li class="goods__item">
                                 <article class="goods-item">
-                                    <a href="card.html">
+                                    <a class="goods" href="card.html">
                                         <img src="img/catalog_goods/NoteBook Honor MagicBook X14.jpg"
                                             alt="Ноутбук Honor MagicBook X14" class="goods-item__image">
                                         <h3 class="goods-item__title">Ноутбук Honor MagicBook X14 Additional text to
@@ -298,6 +299,7 @@
                                     </div>
                                 </article>
                             </li>
+                            -->
 
                             <!--Доп. элемент для проверки-->
                             <!--
@@ -455,7 +457,7 @@
                 <img src="img/logo.svg" alt="Логотип Techno shop" class="footer__logo">
             </a>
 
-            <div class="footer__column">
+            <div class="footer__column footer__catalog">
                 <h3 class="footer__column-title">Каталог</h3>
                 <ul class="footer__list footer__list_double">
                     <li class="footer__list-item">
@@ -479,7 +481,7 @@
                     </li>
 
                     <li class="footer__list-item">
-                        <a href="#" class="footer__link">Электронные книги</a>
+                        <a href="#" class="footer__link">Электронные&nbsp;книги</a>
                     </li>
 
                     <li class="footer__list-item">
@@ -496,7 +498,7 @@
                 </ul>
             </div>
 
-            <div class="footer__column">
+            <div class="footer__column footer__customer">
                 <h3 class="footer__column-title">Покупателям</h3>
                 <ul class="footer__list">
                     <li class="footer__list-item">
@@ -517,14 +519,14 @@
                 </ul>
             </div>
 
-            <div class="footer__column">
+            <div class="footer__column footer__contacts">
                 <h3 class="footer__column-title">Контакты</h3>
                 <ul class="footer__list footer__list-contacts">
                     <li class="footer__list-item footer__list-contact">Тел:
                         <a href="tel:89149239223" class="footer__link">8 914 923 92 - 23</a>
                     </li>
 
-                    <li class="footer__list-item footer__list-contact">Email:
+                    <li class="footer__list-item footer__list-contact footer__list-contact_special">Email:
                         <a href="mailto:TechnoSHOP@gmail.com" class="footer__link">TechnoSHOP@gmail.com</a>
                     </li>
                 </ul>
@@ -570,7 +572,7 @@
 
             <div class="footer__column  footer__designer">
                 <p>Design by Anastasia Ilina</p>
-                <p> Tg:
+                <p>Tg:
                     <a href="" class="footer__designer-link"
                         aria-label="написать сообщение дизайнеру в Telegram">@Mrshmallowww</a>
                 </p>

@@ -7,9 +7,17 @@
     line-height: 22px;
     align-items: center;
 
+    @include mobile {
+        gap: 10px;
+    }
+
     &__list {
         display: flex;
         gap: 10px;
+
+        @include mobile {
+            gap: 3px;
+        }
     }
 
     &__link {
@@ -22,6 +30,10 @@
         border: 2px solid transparent;
         transition: border-color .2s ease;
 
+        @include mobile {
+            width: 26px;
+            height: 26px;
+        }
 
         &_active {
             border-color: $color-main;
